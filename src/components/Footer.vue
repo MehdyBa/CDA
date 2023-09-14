@@ -57,3 +57,14 @@
     </div>
   </footer>
 </template>
+<!-- <style>
+footer {
+  background-color: rgb(64, 64, 64);
+  color: white;
+  padding: 20px 0; /* Espace autour du contenu du footer */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+</style> -->

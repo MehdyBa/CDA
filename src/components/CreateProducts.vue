@@ -62,6 +62,7 @@
                 <button class="btn btn-primary col-12 col-md-3 justify-content-md-end" type="submit"
                     id="Create product">Create</button>
             </div>
+            <br>
         </form>
     </div>
     <Toast></Toast>
@@ -157,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
             price.classList.add("is-valid");
         }
 // Validation du champ "Image"
-if (imageInput.files.length > 0) {
+        if (imageInput.files.length > 0) {
             const imageFile = imageInput.files[0];
             const allowedExtensions = ["jpg", "png", "gif"];
             const maxSize = 1048576; // 1 Mo en octets

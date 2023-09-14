@@ -109,27 +109,29 @@
     </svg>
       <div class="row justify-content-center">
           <div class="column">
-            <h1>Welcome nice to see you again</h1>
+            <h1 class="text-center">Welcome nice to see you again</h1>
               <br>
               <h2 class="text-center">Login your account</h2>
               <br>
               <br>
               <br>
               <form id="myFormSignIN">
-  <label for="email" class="form-label">Email :</label>
-  <input class="form-control" type="email" id="email" placeholder="Email" aria-label="Enter your mail addresses" required>
+                <div class="form-group-a">
+  <label for="email" class="form-label-a">Email :</label>
+  <input class="form-control-a" type="email" id="email" placeholder="Email" aria-label="Enter your mail addresses" required>
   <div class="invalid-feedback error-message" id="emailError"></div>
+</div>
   <br>
   <br>
   <br>
-  <label for="inputPassword5" class="form-label">Password :</label>
-  <input type="password" id="inputPassword5" placeholder="Password" class="form-control" aria-labelledby="passwordHelpBlock" required>
+  <div class="form-group-a">
+  <label for="inputPassword5" class="form-label-a">Password :</label>
+  <input type="password" id="inputPassword5" placeholder="Password" class="form-control-a" aria-labelledby="passwordHelpBlock" required>
   <div class="invalid-feedback error-message" id="passwordError"></div>
   <a class="link">
     <RouterLink to="" class="nav-link-bg">Forgot password ?</RouterLink>
   </a>
-  <br>
-  <br>
+</div>
   <div class="text-center">
   <button class="btn btn-light custom-button" onclick="validateForm()">Submit</button>
   </div>
@@ -138,12 +140,6 @@
   </h3>
 </form>
           </div>
-          <div class="column">
-              <br>
-              <br>
-              
-              
-            </div>
           </div>
     </div>
 </template>
@@ -257,19 +253,21 @@
   margin: 4px; /* Optionally, add margin between links */
   display: inline-block; /* Display links as inline-block to control spacing */
 }
-body {
-  background: linear-gradient(to right, #002aff 0%, #03ffd1 19%, #6aff00 40%, #ffb300 60%, #ff00d0 83%, #1e5799 100%);
-  background-size: 10000px 100%;
-  animation: bg 15s linear infinite;
+.form-control-a {
+  width: 100%;
+  max-width: 500px; /* Ajustez la largeur maximale selon vos préférences */
+  margin: 0 auto; /* Centrez les champs horizontalement */
+  border-radius: 10px;
+}
+.form-group-a {
+  display: grid;
+  grid-template-columns: 1fr; /* Une seule colonne */
+  grid-gap: 10px; /* Espace entre les éléments */
+  text-align: center; /* Centre les éléments horizontalement */
 }
 
-@keyframes bg {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 10000px;
-  }
+.form-label-a {
+  justify-self: center; /* Centre les libellés horizontalement */
 }
 
 </style>
