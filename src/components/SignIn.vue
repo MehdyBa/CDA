@@ -133,7 +133,7 @@
   </a>
 </div>
   <div class="text-center">
-  <button class="btn btn-light custom-button" onclick="validateForm()">Submit</button>
+  <button class="btn btn-light custom-button" onclick="validateForm()">sign-in</button>
   </div>
   <h3 class="text-center link">
     <RouterLink to="/Sign-Up" class="nav-link-bg">Create account</RouterLink>

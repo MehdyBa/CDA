@@ -13,22 +13,22 @@
       <div class="collapse navbar-collapse justify-content-center">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink to="/" class="nav-link-bg">Home</RouterLink>
+            <RouterLink to="/" class="nav-link-bg-bg">Home</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/Backpack" class="nav-link-bg-bg">Backpacks</RouterLink>
+            <RouterLink to="/Products" class="nav-link-bg-bg">Products</RouterLink>
           </li>
           <li class="nav-item">
+            <RouterLink to="/Create-Products" class="nav-link-bg-bg">Create-products</RouterLink>
+          </li>
+          <!-- <li class="nav-item">
             <RouterLink to="/Outerwear" class="nav-link-bg-bg">Outerwears</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/Accessory" class="nav-link-bg-bg">Accessories</RouterLink>
-          </li>
+          </li> -->
           <li class="nav-item">
             <RouterLink to="/Blog" class="nav-link-bg-bg">FAQ</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/Create-Products" class="nav-link-bg-bg">Create-products</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/sign-in" class="nav-link-bg-bg">Sign In/Up</RouterLink>

@@ -5,11 +5,11 @@
         <form id="myForm">
             <div class="row">
             <div class="col-12 mb-3 col-md-6">
-                <label for="name" class="form-label">Brand :</label>
+                <label for="brand" class="form-label">Brand :</label>
                 <input class="form-control" type="text" aria-label="default input example">
             </div>
             <div class="col-12 mb-3 col-md-6">
-                <label for="name" class="form-label">Model :</label>
+                <label for="model" class="form-label">Model :</label>
                 <input class="form-control" type="text" aria-label="default input example">
             </div>
             </div>
@@ -39,8 +39,7 @@
                     </select>
                 </div>
                 <div class="col-12 mb-3 col-md-4">
-                    <label id="categoryId" for="categoryId" class="form-label">Category
-                        :</label>
+                    <label id="categoryId" for="categoryId" class="form-label">Category :</label>
                         <select class="form-select" aria-label="Default select example">
                          <option selected>Choose Category Product</option>
                          <option value="1">Backpacks</option>
@@ -66,6 +65,7 @@
         </form>
     </div>
     <Toast></Toast>
+    
 </template>
 <style>
     .is-invalid {
@@ -80,6 +80,21 @@
         color: red;
         font-size: 12px;
     }
+    #imageContainer {
+    position: relative;
+}
+
+#imageText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 </style>
 
 <script>

@@ -19,8 +19,9 @@
         <div class="row justify-content-center">
             <div class="column" style="background-color:clear;">
                 <br>
-                <h2 class="text-center">Sign Up</h2>
+                <h1 class="text-center">Welcome to <strong>Hardware Tactical</strong></h1>
                 <br>
+                <h3 class="text-center">Create you account</h3>
                 <form id="signupForm">
                     <label for="name" class="form-label">Last Name :</label>
                     <input class="form-control" id="name" type="text" placeholder="Last Name" aria-label="Nom" required>
