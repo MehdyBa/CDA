@@ -129,7 +129,7 @@
   <input type="password" id="inputPassword5" placeholder="Password" class="form-control-a" aria-labelledby="passwordHelpBlock" required>
   <div class="invalid-feedback error-message" id="passwordError"></div>
   <a class="link">
-    <RouterLink to="" class="nav-link-bg">Forgot password ?</RouterLink>
+    <RouterLink to="/forgot-password" class="nav-link-bg">Forgot password ?</RouterLink>
   </a>
 </div>
   <div class="text-center">
