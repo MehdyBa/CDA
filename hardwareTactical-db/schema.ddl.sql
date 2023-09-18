@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS sizes;
+
+CREATE TABLE categories(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(100) UNIQUE NOT NULL -- SECONDARY KEY
+);
+CREATE TABLE sizes(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(100) UNIQUE NOT NULL -- SECONDARY KEY
+);
+
+CREATE TABLE products (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(100) UNIQUE NOT NULL,
+	description VARCHAR(1000) NOT NULL,
+	image_URL VARCHAR(300) NOT NULL,
+	size_id INTEGER,
+	CONSTRAINT fk_size_id 
+		FOREIGN KEY(size_id) 
+		REFERENCES sizes(id),
+	categories_id INTEGER,
+	CONSTRAINT fk_categories_id 
+		FOREIGN KEY(categories_id) 
+		REFERENCES categories(id),
+	price DECIMAL,
+	created_at TIMESTAMP NOT NULL		
+);
+

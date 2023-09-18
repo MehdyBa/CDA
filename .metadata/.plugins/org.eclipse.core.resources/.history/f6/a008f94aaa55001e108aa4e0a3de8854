@@ -1,0 +1,13 @@
+package co.simplon.hardwareTacticalAPI.services;
+import java.util.Collection;
+
+import co.simplon.stickmeAPI.dtos.StickerCreateDto;
+import co.simplon.stickmeAPI.dtos.StickerView;
+
+public interface StickerService {
+    void create(StickerCreateDto inputs);
+
+    void delete(Long id);
+
+    Collection<StickerView> getAll();
+}
