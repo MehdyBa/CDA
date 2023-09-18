@@ -1,0 +1,59 @@
+package co.simplon.hardwareTacticalAPI.services;
+
+import java.time.LocalDate;
+import java.util.Collection;
+
+import org.springframework.stereotype.Service;
+
+import co.simplon.hardwareTacticalAPI.dtos.ProductCreateDto;
+import co.simplon.hardwareTacticalAPI.dtos.ProductView;
+import co.simplon.hardwareTacticalAPI.entities.Categories;
+import co.simplon.hardwareTacticalAPI.entities.Size;
+import co.simplon.hardwareTacticalAPI.entities.Product;
+import co.simplon.hardwareTacticalAPI.repositories.CategoriesRepository;
+import co.simplon.hardwareTacticalAPI.repositories.SizeRepository;
+import co.simplon.hardwareTacticalAPI.repositories.ProductRepository;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+    private SizeRepository sizes;
+    private CategoriesRepository categories;
+    private ProductRepository products;
+
+    public ProductServiceImpl(SizeRepository sizes,
+	    CategoriesRepository categories,
+	    ProductRepository product) {
+	this.sizes = sizes;
+	this.categories = categories;
+	this.products = products;
+    }
+
+    @Override
+    public void create(ProductCreateDto input) {
+    	Product product = new Product();
+    	product.setName(input.getName());
+    	product.setDescription(input.getDescription());
+    	product.setImageURL(input.getImageURL());
+	Size size = sizes
+		.getReferenceById(input.getSizeId());
+	product.setSize(size);
+	Categories categories = categories
+		.getReferenceById(input.getCategoriesId());
+	product.setAspect(categories);
+	product.setPrice(input.getPrice());
+	LocalDate createdAt = LocalDate.now();
+	product.setCreatedAt(createdAt);
+	this.products.save(product);
+    }
+
+    @Override
+    public Collection<ProductView> getAll() {
+	return this.products.findAllProjectedBy();
+    }
+
+    @Override
+    public void delete(Long id) {
+	this.products.deleteById(id);
+    }
+}

@@ -1,0 +1,25 @@
+package co.simplon.hardwareTacticalAPI.services;
+
+import java.util.Collection;
+
+import org.springframework.stereotype.Service;
+
+import co.simplon.hardwareTacticalAPI.dtos.CategoriesView;
+import co.simplon.hardwareTacticalAPI.repositories.CategoriesRepository;
+
+@Service
+public class CategoriesServiceImpl
+	implements CategoriesService {
+
+    private CategoriesRepository categoriess;
+
+    public CategoriesServiceImpl(CategoriesRepository categoriess) {
+	this.categoriess = categoriess;
+    }
+
+    @Override
+    public Collection<CategoriessView> getAll() {
+	return this.categoriess.findAllProjectedBy();
+    }
+
+}
