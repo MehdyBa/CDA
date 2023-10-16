@@ -1,9 +1,9 @@
 <template>
 <header>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: linear-gradient(90deg, rgb(62, 62, 62) 0%, rgb(144, 144, 144) 50%, rgb(62, 62, 62) 100%); height: 100px;">
-    <div class="container">
-      <RouterLink to="/">
-        <a class="navbar-brand" style="max-height: 40px;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: linear-gradient(90deg, rgb(62, 62, 62) 0%, rgb(144, 144, 144) 50%, rgb(62, 62, 62) 100%); height: 150px;">
+    <div class="container" style="background-color: rgb(186, 186, 186); border-radius: 10px;">
+      <RouterLink to="/" class="white-text">
+        <a class="navbar-brand" style="max-height: 60px;">
           <img src="asset/ICON.png" style="max-height: 100%; width: auto;"> Hardware Tactical
         </a>
       </RouterLink>
@@ -15,18 +15,29 @@
           <li class="nav-item">
             <RouterLink to="/" class="nav-link-bg-bg">Home</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink to="/Products" class="nav-link-bg-bg">Products</RouterLink>
+          <li class="nav-item dropdown">
+          <a  class="nav-link-bg-bg" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li class="nav-item">
+            <RouterLink to="/Products" class="nav-link-bg-bg">All Products</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink to="/Create-Products" class="nav-link-bg-bg">Create-products</RouterLink>
-          </li>
-          <!-- <li class="nav-item">
+            <li class="nav-item">
             <RouterLink to="/Outerwear" class="nav-link-bg-bg">Outerwears</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/Accessory" class="nav-link-bg-bg">Accessories</RouterLink>
-          </li> -->
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/Backpack" class="nav-link-bg-bg">Backpacks</RouterLink>
+          </li>
+          </ul>
+        </li>
+          <li class="nav-item">
+            <RouterLink to="/Create-Products" class="nav-link-bg-bg">Create-products</RouterLink>
+          </li>
+
           <li class="nav-item">
             <RouterLink to="/Blog" class="nav-link-bg-bg">FAQ</RouterLink>
           </li>
@@ -43,7 +54,7 @@
 
 <style>
   .nav-item {
-    margin-right: 10px; /* Ajoutez la marge de votre choix ici */
+    margin-right: 1px; /* Ajoutez la marge de votre choix ici */
   }
   .nav-link.btn.btn-light {
     color: black; /* Couleur du texte en noir */
@@ -64,3 +75,7 @@
   display: inline-block; /* Display links as inline-block to control spacing */
 }
 </style>
+
+<script>
+
+</script>

@@ -107,7 +107,7 @@
   </g>
 </g>
     </svg>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center py-5 my-5">
           <div class="column">
             <h1 class="text-center">Welcome nice to see you again</h1>
               <br>
@@ -222,12 +222,6 @@
   display: flex;
 }
 
-/* Create two equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 10px;
-  height: 600px; /* Should be removed. Only for demonstration */
-}
 #background-svg {
   position: fixed;
   top: 0;

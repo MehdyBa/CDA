@@ -1,0 +1,91 @@
+package co.simplon.hardwareTacticalAPI.dtos;
+
+import java.math.BigDecimal;
+
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import jakarta.validation.constraints.NotBlank;
+
+public class ProductCreateDto {
+	 	@Size(max = 100)
+	 	@NotBlank
+	    private String name;
+	    
+	 	@Size(max = 1000)
+	    @NotBlank
+	    private String description;
+	    
+	 	@Size(max = 300)
+	    @NotBlank
+	    private String imageURL;
+	    
+	 	@NotNull
+	    private Long sizeId;
+	    
+	 	@NotNull
+	    private Long CategoriesId;
+	    
+	 	@DecimalMax(value = "100.00")
+	    @DecimalMin(value = "0.01")
+	    @NotNull
+	    private BigDecimal price;
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getDescription() {
+			return description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public String getImageURL() {
+			return imageURL;
+		}
+
+		public void setImageURL(String imageURL) {
+			this.imageURL = imageURL;
+		}
+
+		public Long getSizeId() {
+			return sizeId;
+		}
+
+		public void setSizeId(Long sizeId) {
+			this.sizeId = sizeId;
+		}
+
+		public Long getCategoriesId() {
+			return CategoriesId;
+		}
+
+		public void setCategoriesId(Long categoriesId) {
+			CategoriesId = categoriesId;
+		}
+
+		public BigDecimal getPrice() {
+			return price;
+		}
+
+		public void setPrice(BigDecimal price) {
+			this.price = price;
+		}
+
+		@Override
+		public String toString() {
+			return "ProductCreateDto [name=" + name + ", description=" + description + ", imageURL=" + imageURL
+					+ ", sizeId=" + sizeId + ", CategoriesId=" + CategoriesId + ", price=" + price + "]";
+		}
+
+
+}

@@ -4,89 +4,88 @@ import java.math.BigDecimal;
 
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
+
 public class ProductCreateDto {
-	 @Size(max = 100)
-	    @NotEmpty
+	 	@Size(max = 100)
+	 	@NotBlank
 	    private String name;
-	    @Size(max = 1000)
-	    @NotEmpty
+	    
+	 	@Size(max = 1000)
+	    @NotBlank
 	    private String description;
-	    @Size(max = 300)
-	    @NotEmpty
+	    
+	 	@Size(max = 300)
+	    @NotBlank
 	    private String imageURL;
-	    @NotNull
+	    
+	 	@NotNull
 	    private Long sizeId;
-	    @NotNull
+	    
+	 	@NotNull
 	    private Long CategoriesId;
-	    @DecimalMax(value = "100.00")
+	    
+	 	@DecimalMax(value = "100.00")
 	    @DecimalMin(value = "0.01")
-	    @Positive
 	    @NotNull
 	    private BigDecimal price;
 
-	    public ProductCreateDto() {
-		// TODO Auto-generated constructor stub
-	    }
+		public String getName() {
+			return name;
+		}
 
-	    public String getName() {
-		return name;
-	    }
+		public void setName(String name) {
+			this.name = name;
+		}
 
-	    public void setName(String name) {
-		this.name = name;
-	    }
+		public String getDescription() {
+			return description;
+		}
 
-	    public String getDescription() {
-		return description;
-	    }
+		public void setDescription(String description) {
+			this.description = description;
+		}
 
-	    public void setDescription(String description) {
-		this.description = description;
-	    }
+		public String getImageURL() {
+			return imageURL;
+		}
 
-	    public String getImageURL() {
-		return imageURL;
-	    }
+		public void setImageURL(String imageURL) {
+			this.imageURL = imageURL;
+		}
 
-	    public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
-	    }
+		public Long getSizeId() {
+			return sizeId;
+		}
 
-	    public Long getSizeId() {
-		return sizeId;
-	    }
+		public void setSizeId(Long sizeId) {
+			this.sizeId = sizeId;
+		}
 
-	    public void setSizeId(Long sizeId) {
-		this.sizeId = sizeId;
-	    }
+		public Long getCategoriesId() {
+			return CategoriesId;
+		}
 
-	    public Long getCategoriesId() {
-		return categoriesId;
-	    }
+		public void setCategoriesId(Long categoriesId) {
+			CategoriesId = categoriesId;
+		}
 
-	    public void setCategoriesId(Long categoriesId) {
-		this.categoriesId = categoriesId;
-	    }
+		public BigDecimal getPrice() {
+			return price;
+		}
 
-	    public BigDecimal getPrice() {
-		return price;
-	    }
+		public void setPrice(BigDecimal price) {
+			this.price = price;
+		}
 
-	    public void setPrice(BigDecimal price) {
-		this.price = price;
-	    }
+		@Override
+		public String toString() {
+			return "ProductCreateDto [name=" + name + ", description=" + description + ", imageURL=" + imageURL
+					+ ", sizeId=" + sizeId + ", CategoriesId=" + CategoriesId + ", price=" + price + "]";
+		}
 
-	    @Override
-	    public String toString() {
-		return "{name=" + name + ", description="
-			+ description + ", imageURL=" + imageURL
-			+ ", sizeId=" + sizeId + ", categoriesId="
-			+ categoriesId + ", price=" + price + "}";
-	    }
 
 }

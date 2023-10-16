@@ -1,4 +1,4 @@
-<template>s
+<template>
 <section>
   <h1 class="text-center mb-4 pb-2 fw-bold">FAQ</h1>
   <h3 class="text-center mb-5">
@@ -110,3 +110,17 @@
   </div>
 </section>
 </template>
+<style>
+/* Ajoutez ces styles CSS */
+.accordion-item {
+  max-height: 211px; /* Hauteur maximale pour chaque accordion */
+  margin-bottom: 90px; /* Espacement vertical entre les accordions */
+}
+
+.accordion-button {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>

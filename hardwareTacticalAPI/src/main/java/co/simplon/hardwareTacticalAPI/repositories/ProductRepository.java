@@ -4,10 +4,12 @@ import java.util.Collection;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import co.simplon.hardwareTacticalApi.dtos.ProductView;
-import co.simplon.hardwareTacticalApi.entities.Product;
+import co.simplon.hardwareTacticalAPI.dtos.ProductView;
+import co.simplon.hardwareTacticalAPI.entities.Product;
+
 
 public interface ProductRepository
 	extends JpaRepository<Product, Long> {
-    Collection<ProductView> findAllProjectedBy();
+
+	Collection<ProductView> findAllProjectedBy();
 }

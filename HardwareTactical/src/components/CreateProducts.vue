@@ -18,16 +18,16 @@
                     <textarea class="form-control" id="description" name="description" rows="3" style="height: 100px"></textarea>
             </div>
             <div class="col-12 mb-3">
-                <label for="imageURL" class="form-label">Image :</label>
-                <input
-          class="form-control form-control-lg"
-          id="formFileLg"
-          type="file"
-          accept=".jpg, .gif, .png"
-          ref="fileInput"
-          @change="handleFileChange"
-                                     />
-            </div>
+    <label for="imageURL" class="form-label">Image:</label>
+    <input
+        class="form-control form-control-lg"
+        id="formFileLg"
+        type="file"
+        accept=".jpg, .gif, .png"
+        ref="fileInput"
+        @change="handleFileChange"
+    />
+</div>
             <div class="row">
                 <div class="col-12 mb-3 col-md-4">
                     <label for="sizeId" class="form-label">Size :</label>

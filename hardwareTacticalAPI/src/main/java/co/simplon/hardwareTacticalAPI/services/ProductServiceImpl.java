@@ -38,9 +38,9 @@ public class ProductServiceImpl implements ProductService {
 	Size size = sizes
 		.getReferenceById(input.getSizeId());
 	product.setSize(size);
-	Categories categories = categories
+	Categories categorie = categories
 		.getReferenceById(input.getCategoriesId());
-	product.setCategories(categories);
+	product.setCategories(categorie);;
 	product.setPrice(input.getPrice());
 	LocalDate createdAt = LocalDate.now();
 	product.setCreatedAt(createdAt);

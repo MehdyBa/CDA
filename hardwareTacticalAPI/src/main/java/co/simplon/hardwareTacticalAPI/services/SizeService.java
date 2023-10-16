@@ -1,5 +1,9 @@
 package co.simplon.hardwareTacticalAPI.services;
 
-public interface SizeService {
+import java.util.Collection;
 
+import co.simplon.hardwareTacticalAPI.dtos.SizeView;
+
+public interface SizeService {
+public Collection<SizeView> getAll();
 }

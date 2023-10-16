@@ -14,12 +14,12 @@ public class CategoriesServiceImpl
     private CategoriesRepository categories;
 
     public CategoriesServiceImpl(CategoriesRepository categories) {
-	this.categories = categories;
+    	this.categories = categories;
     }
 
     @Override
     public Collection<CategoriesView> getAll() {
-	return this.categories.findAllProjectedBy();
+    	return this.categories.findAllProjectedBy();
     }
 
 }

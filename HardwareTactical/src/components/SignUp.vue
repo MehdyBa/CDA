@@ -15,7 +15,7 @@
     </style>
 
 <template>
-        <div class="container-xxl justify-content-center">
+        <div class="container-xxl justify-content-center py-5 my-5">
         <div class="row justify-content-center">
             <div class="column" style="background-color:clear;">
                 <br>
@@ -42,7 +42,7 @@
                         aria-labelledby="passwordHelpBlock" required>
                     <span class="error-message" id="passwordError"></span>
                     <br>
-                    <label for="inputPassword6" class="form-label">Repeat Password :</label>
+                    <label for="inputPassword6" class="form-label">Confirm Password :</label>
                     <input type="password" id="inputPassword6" placeholder="Repeat Password" class="form-control"
                         aria-labelledby="passwordHelpBlock" required>
                     <span class="error-message" id="confirmPasswordError"></span>

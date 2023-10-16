@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "product")
 public class Product {
-	  @Id
+	    @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    @Column(name = "id")
 	    private Long id;

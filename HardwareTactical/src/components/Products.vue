@@ -24,7 +24,7 @@ export default {
 
 <template>
     <div class="container-xl">
-        <h1 style="text-center">Products</h1>
+        <h1 style="text-center">All Products</h1>
         <div class="row justify-content-center">
             <div v-for="product in this.products" class="card mx-3 my-3 col-4 col-md-2">
                 <img :src="product.imageURL" class="card-img-top" alt="...">

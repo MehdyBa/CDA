@@ -4,6 +4,14 @@
          <h3 class="text-center">Backpacks</h3>
       <div class="row justify-content-center">
         <div class="card" style="width: 18rem;">
+          <div class="form-check">
+      <input class="form-check-input" type="checkbox" v-model="isChecked" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        <i v-if="isChecked" class="fas fa-star"></i> <!-- Affiche l'étoile si la case est cochée -->
+        <i v-else class="far fa-star"></i> <!-- Affiche une étoile vide si la case n'est pas cochée -->
+      </label>
+    </div>
+
           <br>
           <img src="asset/pexels-deybson-mallony-9448166.jpg" class="card-img-center" alt="...">
           <div class="card-body">
@@ -86,3 +94,17 @@
     margin-right: 10px;
   }
 </style>
+
+<script>
+// Importez la bibliothèque Font Awesome
+import '@fortawesome/fontawesome-free/css/all.css';
+
+export default {
+  name: 'VotreComposant',
+  data() {
+    return {
+      isChecked: false, // Initialisez l'état de la case à cocher comme non cochée
+    };
+  },
+};
+</script>
